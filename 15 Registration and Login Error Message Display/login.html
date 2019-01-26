@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log In</title>
+</head>
+
+{% include "nav.html" %}
+<body>
+<div align="center">
+    <h2>Login</h2>
+
+    {% if msg %}
+    <span style="color:red">{{msg}}</span>
+    {% endif %}
+    <form action="/login" method="post" style="width:50%">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" id="username" name="username">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password">
+        </div>
+
+        <div class="form-group">
+            <input type="submit" class="btn" value="Login">
+        </div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+
+<script>
+
+    function rating(){
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+
+                        document.getElementById('rating').innerHTML=this.responseText;
+                    }
+                };
+                xhttp.open("POST", "/movies", true);
+                xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xhttp.send("movie_name="+document.getElementById('movie_name').value);
+
+    }
+</script>
+
+
+
+    <input type="text" name="movie_name" id="movie_name">
+    <button onclick="rating()">Rate</button>
+
+    <br/>
+
+    <div id="rating"></div>

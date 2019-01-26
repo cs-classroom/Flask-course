@@ -1,0 +1,2 @@
+https://www.jetbrains.com/pycharm/download/#section=windows
+https://www.python.org/downloads/release/python-371/

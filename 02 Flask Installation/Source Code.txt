@@ -1,0 +1,13 @@
+from flask import Flask, session, render_template
+
+app = Flask(__name__)
+app.secret_key = "dwhdiu2h2903e"
+
+
+@app.route("/hello")
+def home():
+    return "Hello123"
+
+
+if __name__ == "__main__":
+    app.run()
